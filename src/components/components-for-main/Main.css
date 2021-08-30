@@ -1,0 +1,83 @@
+/* Today */
+
+.Today {
+    background-color: #424242;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+/* Deposit */
+
+.Deposit {
+    background-color: #424242;
+    border-radius: 5px;
+    color: white;
+    
+}
+
+.Deposit h3 {
+    color: #90CAF9;
+    margin-left: 1rem;
+}
+
+.cash {
+    margin-top: -1rem;
+    margin-left: 1rem;
+    font-size: xx-large;
+}
+
+.static-date {
+    margin-top: -2rem;
+    margin-left: 1rem;
+    font-size: medium;
+    font-weight: 600;
+    color: lightgray;
+}
+
+.Deposit button {
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+
+    color: white;
+    background: black;
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    padding: 0.5rem;
+}
+
+.Deposit button:hover {
+    font-weight: 700;
+}
+
+/* Orders */
+
+.Orders {
+    background-color: #424242;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.Orders table {
+    width: 100%;
+	margin-bottom: 20px;
+}
+
+.Orders tr {
+	padding: 5px;
+    
+}
+
+.Orders td {
+    font-size: 18px;
+	padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.starter {
+    font-weight: bold;
+}
+

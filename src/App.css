@@ -1,38 +1,112 @@
 .App {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "sidebar dashboard dashboard"
+    "sidebar main main"
+    "sidebar main main";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar { grid-area: sidebar; }
+
+.dashboard { grid-area: dashboard }
+
+.main {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr 1.2fr 0.3fr 2.2fr 0.3fr;
+  grid-template-rows: 0.2fr 1.5fr 0.3fr 2fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . . . ."
+    ". schedule schedule . deposit ."
+    ". . . . . ."
+    ". orders orders orders orders ."
+    ". orders orders orders orders .";
+  grid-area: main;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.schedule { grid-area: schedule; }
+
+.deposit { grid-area: deposit; }
+
+.orders { grid-area: orders; }
+
+
+.Sidebar {
+  background-color: #424242;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Sidebar span {
+  font-size: x-large;
+  margin-left: 85%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Sidebar header {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.s-links {
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+  align-items: center;
+  margin-bottom: 2rem;
 }
+
+.link-item {
+  margin-top: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.reports {
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.reports p {
+  color: grey;
+  font-size: medium;
+  
+}
+
+.Dashboard {
+  background-color: #90CAF9;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+.Dashboard h3 {
+  font-weight: 600;
+}
+
+.Dashboard a {
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+}
+
+.Main {
+  background-color: #121212;
+}
+
+.Reports {background-color: lightslategrey;}
+.Orders {background-color: rgb(196, 113, 59);}
+.Customers {background-color: rgb(6, 202, 49);}
+.Integrations {background-color: rgb(223, 37, 130);}
